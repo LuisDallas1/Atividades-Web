@@ -1,0 +1,41 @@
+.heading {
+    color: black;
+    background-color: white;
+    text-align: center;
+}
+
+.paragrafo{
+    color: black;
+    background-color: white;
+}
+
+.foto {
+    display: block;
+    margin: 30px auto;
+    width: 500px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.foto:hover {
+    animation: girarZoom 0.8s ease forwards;
+}
+
+@keyframes girarZoom {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.1) rotate(360deg);
+    }
+
+    100% {
+        transform: scale(1.2) rotate(720deg);
+    }
+}
+
+.citacao {
+    text-align: center;
+}
