@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Foxhole - Persistent Warfare</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial;
+        margin: 0;
+        background-color: #fdfaf3;
+        color: #333;
+      }
+
+      .header {
+        padding: 60px;
+        text-align: center;
+        background: #556b2f;
+        color: #f5f5dc;
+      }
+
+      .navbar {
+        display: flex;
+        background-color: #3a4b3c;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .navbar a {
+        color: #f5f5dc;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+      }
+
+      .navbar a:hover {
+        background-color: #a3b18a;
+        color: black;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .side {
+        flex: 30%;
+        background-color: #e6e4d9;
+        padding: 20px;
+      }
+
+      .main {
+        flex: 70%;
+        background-color: #fdfaf3;
+        padding: 20px;
+      }
+
+      .footer {
+        padding: 20px;
+        text-align: center;
+        background: #d4d2c6;
+        color: #333;
+      }
+
+      @media screen and (max-width: 700px) {
+        .row,
+        .navbar {
+          flex-direction: column;
+        }
+      }
+
+      /* Dark mode styles */
+      .dark-mode {
+        background-color: #1f1f1f;
+        color: #e0e0e0;
+      }
+
+      .dark-mode .header {
+        background-color: #2e3b2e;
+        color: #e0e0e0;
+      }
+
+      .dark-mode .navbar {
+        background-color: #111;
+      }
+
+      .dark-mode .navbar a {
+        color: #e0e0e0;
+      }
+
+      .dark-mode .navbar a:hover {
+        background-color: #333;
+        color: white;
+      }
+
+      .dark-mode .side {
+        background-color: #2b2b2b;
+      }
+
+      .dark-mode .main {
+        background-color: #1f1f1f;
+      }
+
+      .dark-mode .footer {
+        background-color: #2b2b2b;
+        color: #e0e0e0;
+      }
+
+      /* Botão flutuante */
+      .toggle-btn {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 2000;
+        padding: 10px 15px;
+        background-color: #3a4b3c;
+        color: #f5f5dc;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+
+      .toggle-btn:hover {
+        background-color: #556b2f;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Botão para modo escuro -->
+    <button class="toggle-btn" onclick="toggleDarkMode()">
+      🌙 Alternar Modo
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+      <h1>Foxhole</h1>
+      <p>Massively Multiplayer Persistent Warfare Game</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <a href="#">Gameplay</a>
+      <a href="#">Community</a>
+      <a href="#">Support</a>
+    </nav>
+
+    <!-- The flexible grid (content) -->
+    <main class="row">
+      <aside class="side">
+        <h2>About Foxhole</h2>
+        <h5>Screenshot from the game:</h5>
+        <img src="1.webp" alt="Imagem 1" style="width: 100%" />
+        <p>
+          Foxhole is a unique MMO that focuses on teamwork and large-scale
+          combat in a persistent world. Players take on various roles, from
+          frontline combat to logistics and base building.
+        </p>
+        <h3>Core Features</h3>
+        <p>
+          Coordinate with your squad, manage supply lines, and strategize to
+          dominate the battlefield.
+        </p>
+        <img src="2.jpg" alt="Imagem 2" style="width: 100%" />
+      </aside>
+      <section class="main">
+        <h2>Gameplay Overview</h2>
+        <h5>Exploring the Battlefield</h5>
+        <img src="5.jpg" alt="Imagem 5" style="width: 100%" />
+        <p>
+          Foxhole offers a deep, persistent battlefield where player decisions
+          have lasting impacts. The terrain, supply, and coordination define
+          your chances of success.
+        </p>
+        <p>
+          Players engage in infantry combat, vehicle warfare, and logistics
+          roles, all essential for victory. Communication and teamwork are
+          crucial in this dynamic environment.
+        </p>
+        <br />
+        <h2>Community and Events</h2>
+        <h5>Active and Engaged Players</h5>
+        <img src="4.jpg" alt="Imagem 4" style="width: 100%" />
+        <p>
+          The Foxhole community is known for its cooperation and large-scale
+          organized events. Join clans, participate in wars, and contribute to
+          the evolving story.
+        </p>
+        <p>
+          Regular updates and developer events keep the gameplay fresh and
+          engaging for veterans and newcomers alike.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <h2>© 2025 Foxhole Game</h2>
+    </footer>
+
+    <!-- Script para alternar tema -->
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+</html>
