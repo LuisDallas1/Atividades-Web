@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questao1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #2F4F4F;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        aside {
+            background-color: #6B8E23;
+            padding: 20px;
+            flex: 0 0 30%;
+            color: white;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            margin-bottom: 10px;
+        }
+
+        aside ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        aside ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            background-color: #F0FFF0;
+            padding: 20px;
+            flex: 0 0 70%;
+            color: #333;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #8FBC8F;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #2F4F4F;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 400px) {
+            main {
+                flex-direction: column;
+            }
+
+            aside {
+                flex: 1 1 auto;
+                order: -1; 
+            }
+
+            section {
+                flex: 1 1 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>O Mundo de Foxhole</h1>
+    </header>
+
+    <main>
+        <aside>
+            <h2>Navegação</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Introdução</a></li>
+                    <li><a href="#">Guerras Persistentes</a></li>
+                    <li><a href="#">Logística e Suprimentos</a></li>
+                    <li><a href="#">Estratégia e Táticas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section>
+            <h2>O Jogo Foxhole: Uma Visão Geral</h2>
+            <article>
+                <h3>Bem-vindo aos Campos de Batalha de Foxhole</h3>
+                <p>Foxhole é um jogo <strong>massivamente multiplayer online (MMO)</strong> que simula uma guerra total, onde milhares de jogadores contribuem para o esforço de guerra global. Cada ação, desde a fabricação de um único rifle até a construção de uma fortaleza inteira, tem um impacto direto no campo de batalha.</p>
+                <div class="image-placeholder">
+                    Cenário de Guerra Persistente
+                </div>
+                <p>Neste jogo, a guerra é <strong>persistente</strong>; ela continua 24 horas por dia, 7 dias por semana, até que uma facção conquiste a vitória. Não há resets de rodadas, e cada item e estrutura é construído e utilizado pelos jogadores. Isso cria uma experiência de guerra incrivelmente imersiva e dinâmica.</p>
+                <div class="image-placeholder">
+                    Logística Vital
+                </div>
+                <p>A <strong>logística</strong> é o coração de Foxhole. Desde a extração de recursos, refino, produção de componentes, fabricação de equipamentos e armas, até o transporte para a linha de frente, tudo depende da coordenação e esforço dos jogadores. Sem uma cadeia de suprimentos eficiente, as tropas na linha de frente não conseguirão lutar. Prepare-se para ser um soldado, um engenheiro, um motorista de suprimentos ou um estrategista – a guerra precisa de todos os papéis!</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            luiseduard2005@alu.ufc.br
+        </address>
+        <p>2025.1</p>
+        <p>Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizador de Pokémon</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            margin: 20px 0;
+        }
+        button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pokémon #<span id="id">1</span></h1>
+        <img id="img" src="" alt="Pokémon">
+        <div>
+            <button id="prev" onclick="trocar(-1)">Voltar</button>
+            <button id="next" onclick="trocar(1)">Avançar</button>
+        </div>
+    </div>
+
+    <script>
+        let id = 1, max = 100;
+        const idSpan = document.getElementById("id");
+        const img = document.getElementById("img");
+        const prev = document.getElementById("prev");
+        const next = document.getElementById("next");
+
+        function atualizar() {
+            idSpan.textContent = id;
+            img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;
+            img.onerror = () => {
+                img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+            };
+            prev.disabled = id <= 1;
+            next.disabled = id >= max;
+        }
+
+        function trocar(delta) {
+            if (id + delta >= 1 && id + delta <= max) {
+                id += delta;
+                atualizar();
+            }
+        }
+
+        atualizar();
+    </script>
+</body>
+</html>
